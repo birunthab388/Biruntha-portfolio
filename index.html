@@ -1,0 +1,352 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+         <title>Biruntha J | Portfolio</title> 
+         <meta name="description" content="Portfolio of Biruntha J -BCA
+          Bachular of Computer Application.">
+          <meta name="keywords" content="Biruntha J, 
+          Portfolio, Web Developer, HTML, CSS, Python."> 
+ <!-- Favicon (optional) --> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+/* ---------- Global Styles ---------- */ 
+   * { 
+      margin:0;
+      padding:0;
+      box-sizing:border-box; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior:smooth;
+     }
+      body 
+     { 
+      background:#111;
+      color:#eee;
+      line-height:1.6;
+      overflow-x:hidden; 
+      position:relative;
+     }
+   /* ---------- Particles Background ---------- */
+     #particles-js
+     {
+       position:fixed;
+       width:100%;
+       height:100%;
+       top:0;
+       left:0;
+       z-index:-1; 
+      }
+    /* ---------- Header ---------- */
+     header {
+              background:#1f1f1f;
+               color:#fff; 
+               padding:25px;
+               text-align:center;
+               font-size:28px;
+               font-weight:bold;
+               letter-spacing:1.5px;
+             }
+   /* ---------- Navigation ---------- */ 
+                                                   nav
+                                                    {
+                                                         display:flex; 
+                                                         justify-content:center; 
+                                                         flex-wrap:wrap;
+                                                          background:#111;
+                                                           }
+                                                            nav a
+                                                             {
+                                                                 color:#fff;
+                                                                  padding:14px 20px;
+                                                                   text-decoration:none;
+                                                                    font-size:18px;
+                                                                     transition:0.3s; 
+                                                                     }
+                                                                      nav a:hover
+                                                                       {
+                                                                         background:#f02a07;
+                                                                          border-radius:5px; 
+                                                                          }
+                                                                           /* ---------- Sections ---------- */ 
+                                                                           section
+                                                                            {
+                                                                                 padding:60px 20px;
+                                                                                  max-width:1100px; 
+                                                                                  margin:auto; 
+                                                                                  margin-top:30px; 
+                                                                                  background:#1f1f1f; 
+                                                                                  border-radius:10px; 
+                                                                                  box-shadow:0 6px 20px rgba(0,0,0,0.4); 
+                                                                                  position:relative; 
+                                                                                  overflow:hidden;
+                                                                                   } 
+                                                                                   /* ---------- Home ---------- */ 
+                                                                                   .home 
+                                                                                   { 
+                                                                                    text-align:center;
+                                                                                     }
+                                                                                      .profile
+                                                                                       {
+                                                                                         width:180px; 
+                                                                                         height:180px; 
+                                                                                         border-radius:50%; 
+                                                                                         overflow:hidden;
+                                                                                          border:6px solid #ff4500;
+                                                                                           margin:auto; 
+                                                                                           margin-bottom:20px;
+                                                                                            animation: glow 2s infinite alternate; 
+                                                                                        }
+                                                                                             .profile img 
+                                                                                             {
+                                                                                                 width:100%; 
+                                                                                                 height:100%; 
+                                                                                                 object-fit:cover;
+                                                                                                  }
+                                                                                                   .name 
+                                                                                                   {
+                                                                                                     font-size:34px;
+                                                                                                      font-weight:bold; 
+                                                                                                      margin-bottom:10px;
+                                                                                                       animation: colorChange 3s infinite alternate;
+                                                                                                        }
+                                                                                                         @keyframes glow
+                                                                                                         { 0%{
+                                                                                                            box-shadow:0 0 20px #ff4500;} 50%{box-shadow:0 0 25px #00ffcc;} 100%{box-shadow:0 0 20px #ff00ff;} }
+                                                                                                             @keyframes colorChange{ 0%{color:#ff4500;} 25%{color:#00ffcc;} 50%{color:#ff00ff;} 75%{color:#00ffcc;} 100%{color:#ff4500;}
+                                                                                                              }
+                                                                                                               /* ---------- Headings ---------- */
+                                                                                                                section h2
+                                                                                                                 {
+                                                                                                                     text-align:center;
+                                                                                                                      margin-bottom:20px; 
+                                                                                                                      color:#ff4500; 
+                                                                                                                      }
+                                                                                                                       /* ---------- Skills ---------- */ 
+                                                                                                                       .skill-bar 
+                                                                                                                       {
+                                                                                                                         background:#333;
+                                                                                                                          border-radius:25px;
+                                                                                                                           margin:12px 0; 
+                                                                                                                           overflow:hidden;
+                                                                                                                            }
+                                                                                                                             .skill-fill 
+                                                                                                                             { height:24px; 
+                                                                                                                             text-align:center; 
+                                                                                                                             color:#fff; 
+                                                                                                                             font-size:14px; 
+                                                                                                                             line-height:24px;
+                                                                                                                              width:0;
+                                                                                                                               transition:width 2s ease; 
+                                                                                                                               } 
+                                                                                                                               .html 
+                                                                                                                               {background:#ff4500;} 
+                                                                                                                               .css {background:#0077ff;} 
+                                                                                                                               .js {background:#f7df1e; color:#000;} 
+                                                                                                                               .python {background:#306998;} 
+                                                                                                                               .cloud {background:#6c63ff;} 
+                                                                                                                               .data-science {background:#00b894;} 
+                                                                                                                               /* ---------- Timeline ---------- */ 
+                                                                                                                               .timeline{ position:relative; margin:30px 0; } 
+                                                                                                                               .timeline::after{ content:''; position:absolute; 
+                                                                                                                               width:6px; background-color:#ff4500; 
+                                                                                                                               top:0; bottom:0; left:50%; margin-left:-3px; 
+                                                                                                                               }
+                                                                                                                                .timeline-item{
+                                                                                                                                     padding:20px 30px; 
+                                                                                                                                     position:relative; width:50%; 
+                                                                                                                                     } 
+                                                                                                                                     .timeline-item.left{left:0;}
+                                                                                                                                      .timeline-item.right{left:50%;}
+                                                                                                                                       .timeline-item::after{ content:''; position:absolute;
+                                                                                                                                        width:20px; 
+                                                                                                                                        height:20px;
+                                                                                                                                         right:-10px; 
+                                                                                                                                         background:#ff4500;
+                                                                                                                                          border:4px solid #1f1f1f;
+                                                                                                                                           top:15px; border-radius:50%;
+                                                                                                                                            z-index:1;
+                                                                                                                                             }
+                                                                                                                                              .timeline-item.right::after{ left:-10px; }
+                                                                                                                                               /* ---------- Testimonials ---------- */ 
+                                                                                                                                               .testimonials{
+                                                                                                                                                 display:grid;
+                                                                                                                                                  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+                                                                                                                                                   gap:20px; } 
+                                                                                                                                                   .testimonial{ background:#333;
+                                                                                                                                                    padding:20px;
+                                                                                                                                                     border-radius:10px;
+                                                                                                                                                      text-align:center; 
+                                                                                                                                                      font-style:italic;
+                                                                                                                                                       transition:0.3s;
+                                                                                                                                                        } 
+                                                                                                                                                        .testimonial:hover
+                                                                                                                                                        { transform:translateY(-5px); 
+                                                                                                                                                        box-shadow:0 10px 20px rgba(255,69,0,0.5);
+                                                                                                                                                         }
+                                                                                                                                                          /* ---------- Contact ---------- */
+                                                                                                                                                           .contact p
+                                                                                                                                                           { text-align:center; 
+                                                                                                                                                           font-size:16px; 
+                                                                                                                                                           margin:8px 0;
+                                                                                                                                                            } 
+                                                                                                                                                            .contact button
+                                                                                                                                                            { 
+                                                                                                                                                                display:block;
+                                                                                                                                                                 margin:20px auto; 
+                                                                                                                                                                 padding:12px 25px;
+                                                                                                                                                                  background:#ff4500;
+                                                                                                                                                                   color:#fff;
+                                                                                                                                                                    font-size:16px;
+                                                                                                                                                                     border:none; 
+                                                                                                                                                                     border-radius:6px;
+                                                                                                                                                                      cursor:pointer;
+                                                                                                                                                                       transition:0.3s; }
+                                                                                                                                                                        .contact button:hover
+                                                                                                                                                                        {
+                                                                                                                                                                             background:#e63900; }
+                                                                                                                                                                              .social-links{ text-align:center; 
+                                                                                                                                                                             margin-top:15px; } 
+                                                                                                                                                                             .social-links a{ margin:0 10px;
+                                                                                                                                                                              text-decoration:none; 
+                                                                                                                                                                              color:#fff;
+                                                                                                                                                                               font-size:20px;
+                                                                                                                                                                                transition:0.3s; } 
+                                                                                                                                                                                .social-links a:hover{
+                                                                                                                                                                                     color:#ff4500; } 
+                                                                                                                                                                                     /* ---------- Footer ---------- */ 
+                                                                                                                                                                                     footer{ text-align:center; 
+                                                                                                                                                                                     padding:15px; 
+                                                                                                                                                                                     background:#111; 
+                                                                                                                                                                                     color:#fff;
+                                                                                                                                                                                      margin-top:30px;
+                                                                                                                                                                                       font-size:14px; 
+                                                                                                                                                                                       }
+                                                                                                                                                                                        /* ---------- Responsive ---------- */
+                                                                                                                                                                                         @media(max-width:768px)
+                                                                                                                                                                                         {
+                                                                                                                                                                                           .profile
+                                                                                                                                                                                           {
+                                                                                                                                                                                            width:150px;
+                                                                                                                                                                                            height:150px;
+                                                                                                                                                                                            }
+                                                                                                                                                                                             nav a
+                                                                                                                                                                                             {
+                                                                                                                                                                                              font-size:16px;
+                                                                                                                                                                                              padding:10px;
+                                                                                                                                                                                              }
+                                                                                                                                                                                               .timeline-item
+                                                                                                                                                                                               {
+                                                                                                                                                                                                width:100%;
+                                                                                                                                                                                                left:0!important;
+                                                                                                                                                                                                }
+                                                                                                                                                                                                 .timeline-item.right{left:0;} 
+                                                                                                                                                                                                 .timeline-item::after{left:50%;}
+                                                                                                                                                                                                  } 
+                                                                                                                                                                                                  </style>
+                                                                                                                                                                                                   </head>
+                                                                                                                                                                                                    <body> 
+                                                                                                                                                                                                      <!-- Particles Background --> 
+  <div id="particles-js">    
+  </div> <header>Biruntha J| Portfolio</header>
+   <nav> <a href="#home">Home</a>
+     <a href="#about">About</a>
+      <a href="#skills">Skills</a> 
+      <a href="#certifications">Certifications</a>
+       <a href="#timeline">Timeline</a>
+        <a href="#testimonials">Testimonials</a>
+         <a href="#contact">Contact</a>
+         </nav> 
+         <!-- Home -->
+           <section class="home" id="home">
+             <!-- <div class="profile"> 
+              <img src="IMG-20251221-WA0023" alt="Profile Photo"> 
+            </div> <div class="name">Biruntha J</div>  -->
+            <h1>Hello, I'm Biruntha</h1> 
+            <p>Bachular of Computer Application Student</p>
+             <p>Web Developer | Tech Enthusiast</p>
+             </section>
+              <!-- About --> 
+               <section class="about" id="about">
+                 <h2>About Me</h2>
+                  <p> I am a B.C.A Bachular of Computer Application Student from Chengalpattu 
+                    with a passion for web development,. I enjoy building responsive websites 
+                    and exploring innovative technologies to solve real-world problems. </p>
+                 </section> 
+                 <!-- Skills --> <section class="vitae" id="skills">
+                   <h2>Technical Skills</h2>
+                   <div class="skill-bar">
+                    <div class="skill-fill html">HTML - 85%</div></div> 
+                    <div class="skill-bar"><div class="skill-fill css">CSS - 50%</div></div>
+                     <div class="skill-bar"><div class="skill-fill js">JavaScript - 08%</div></div>
+                      <div class="skill-bar"><div class="skill-fill python">Python - 20%</div></div>   
+                    </section>
+                        <!-- Certifications -->
+                          <section class="certificates" id="certifications"> 
+                        <h2>Certifications</h2> 
+                        <!-- <ul>
+                           <li>Oracle Cloud Computing Certification</li> 
+                          <li>Oracle Data Science Certification</li> 
+                          <li>Infospringboards HTML, CSS, JavaScript Certification</li> 
+                        </ul> -->
+                       </section>
+                        <!-- Timeline --> 
+                         <section id="timeline">
+                           <h2>Timeline</h2> 
+                           <div class="timeline"> 
+                            <div class="timeline-item left">
+                               <h4>2023-2024</h4> 
+                               <p>Completed 12th Grade, Goverment Girls  Higer Secondary School</p> 
+                              </div> <div class="timeline-item right"> 
+                                <h4>2024-2027</h4> 
+                                <p>B.C.A Bachular of Computer Application Studed in Annai theresa arts and science college</p>
+                               </div>
+                                <div class="timeline-item left">
+                                 <h4>2024</h4>
+                                  <p>Web Development</p>
+                                 </div> 
+                                </div>
+                               </section> 
+                               <!-- Testimonials -->
+                                 <section id="testimonials"> 
+                                  <h2>Testimonials</h2>
+                                   <div class="testimonials">
+                                     <div class="testimonial">"Biruntha is highly motivated and skilled. Great team player!"</div>
+                                      <div class="testimonial">"A talented developer with strong analytical skills."</div>
+                                       <div class="testimonial">"Always eager to learn and deliver quality work."</div> 
+                                      </div> </section> 
+                                      <!-- Contact -->
+                                        <section class="contact" id="contact">
+                                           <h2>Contact Me</h2>
+                                            <p>📧 Email: birunthab388@gmail.com</p>
+                                             <p>📞 Phone: +91 96558 37840</p>
+                                              <!-- Social Links --> 
+                                               <div class="social-links">
+                                                 <a href="https://www.linkedin.com/in/biruntha-s-03a524230?utm_source=share&utm_campaign=share_via&utm_co… target="_blank">LinkedIn</a>
+                                                  <a href="https://www.instagram.com/bintha_suresh_248" target="_blank">Instagram</a>
+                                                 </div>
+                                                  <!-- CV Download --> 
+                                                   <button onclick="window.open('Biruntha_CV.pdf','_blank')">Download CV</button> 
+                                                  </section>
+                                                   <footer> © 2026 Biruntha.J. All Rights Reserved. </footer> 
+                                                   <!-- ---------- Particles JS ---------- -->
+                                                     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+                                                      <script> particlesJS("particles-js",
+                                                       { "particles": { "number": {"value":60,"density":{"enable":true,"value_area":800}},
+                                                        "color": {"value":"#ff4500"}, "shape": {"type":"circle"}, "opacity": {"value":0.5},
+                                                         "size": {"value":3}, "line_linked": 
+                                                         {"enable":true,"distance":150,"color":"#ff4500","opacity":0.4,"width":1}
+                                                         , "move": {"enable":true,"speed":2} } });
+                                                          </script>
+                                                           <!-- ---------- Skill Animation on Scroll ---------- -->
+                                                             <script> 
+                                                                 window.addEventListener('scroll', () => 
+                                                                 { const skills = document.querySelectorAll('.skill-fill'); 
+                                                                 skills.forEach(skill => 
+                                                                 { const rect = skill.getBoundingClientRect();
+                                                                  if(rect.top < window.innerHeight){
+                                                                     const width = skill.textContent.split('-')[1].trim(); skill.style.width = width; } 
+                                                                     }); });
+                                                                      </script> 
+                                                                      </body>
+                                                                       </html>
